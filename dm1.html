@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draam Mart | Global Import & Export</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark-blue: #0f172a;
+            --slate: #1e293b;
+            --light-gray: #f8fafc;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light-gray);
+            color: var(--slate);
+            line-height: 1.6;
+        }
+
+        /* Hero Section with Graphic Background */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), 
+                        url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=1600');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .hero-content p {
+            font-size: 1.4rem;
+            color: var(--gold);
+            font-weight: 300;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: var(--white);
+            display: flex;
+            justify-content: space-around;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-top: -60px;
+            width: 90%;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 12px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .stat-item { text-align: center; }
+        .stat-item i { color: var(--gold); font-size: 2rem; margin-bottom: 10px; }
+        .stat-item h3 { font-size: 1.2rem; color: var(--dark-blue); }
+
+        /* Content Sections */
+        .container {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark-blue);
+        }
+
+        .section-title .underline {
+            width: 80px;
+            height: 4px;
+            background: var(--gold);
+            margin: 10px auto;
+        }
+
+        /* Product Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .card:hover { transform: translateY(-10px); }
+
+        .card-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-content { padding: 25px; }
+        .card-content h3 { margin-bottom: 15px; color: var(--dark-blue); }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--dark-blue);
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+
+        .contact-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .contact-method {
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 12px;
+            width: 300px;
+            transition: 0.3s;
+        }
+
+        .contact-method:hover { background: rgba(255,255,255,0.1); }
+        .contact-method i { font-size: 2.5rem; color: var(--gold); margin-bottom: 15px; }
+        .contact-method a { color: var(--white); text-decoration: none; font-weight: bold; font-size: 1.1rem; }
+
+        footer {
+            background: #000;
+            color: #777;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            .stats-bar { flex-direction: column; gap: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Draam Mart</h1>
+            <p>Global Trading • Premium Food & Spices • Seamless Logistics</p>
+            <a href="#contact" style="padding: 15px 35px; background: var(--gold); color: white; text-decoration: none; border-radius: 50px; font-weight: bold;">Inquire Now</a>
+        </div>
+    </section>
+
+    <div class="stats-bar">
+        <div class="stat-item">
+            <i class="fas fa-globe-europe"></i>
+            <h3>Europe Expert</h3>
+        </div>
+        <div class="stat-item">
+            <i class="fas fa-ship"></i>
+            <h3>Global Logistics</h3>
+        </div>
+        <div class="stat-item">
+            <i class="fas fa-pepper-hot"></i>
+            <h3>Premium Spices</h3>
+        </div>
+        <div class="stat-item">
+            <i class="fas fa-map-marked-alt"></i>
+            <h3>Middle East Hub</h3>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Core Expertise</h2>
+            <div class="underline"></div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&q=80&w=800');"></div>
+                <div class="card-content">
+                    <h3>Spices & Food Items</h3>
+                    <p>Sourcing the world's most aromatic spices and essential food products directly from the origin to your warehouse.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800');"></div>
+                <div class="card-content">
+                    <h3>Import & Export</h3>
+                    <p>Specializing in bridge-trading between India, Europe, and the Middle East with full compliance management.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&q=80&w=800');"></div>
+                <div class="card-content">
+                    <h3>Supply Chain</h3>
+                    <p>End-to-end logistics solutions ensuring your goods (including floods/liquids) arrive safely and on time.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact" class="contact-section">
+            <h2>Start a Trade Partnership</h2>
+            <p>We are available 24/7 for international inquiries.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-method">
+                    <i class="fab fa-whatsapp"></i>
+                    <p>Chat with us</p>
+                    <a href="https://wa.me/9198972411266">+91 98972 411266</a>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <p>Email our desk</p>
+                    <a href="mailto:draammart@gmail.com">draammart@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Draam Mart | Excellence in Global Food Trading</p>
+    </footer>
+
+</body>
+</html>
